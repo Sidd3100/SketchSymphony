@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ContactUs from "../../pages/ContactUs/ContactUs";
 // import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const Footer = () => {
@@ -29,10 +31,10 @@ const Footer = () => {
                             <div className="footer-item">
                                 <div className="text-xl text-gray-200 uppercase mb-4 font-semibold">Follow us</div>
                                 <div className="icons flex space-x-4 my-4">
-                                    <a href="#" className="text-white hover:text-white transform hover:scale-150 transition-all duration-150 ease-in-out">
+                                    <a href="https://github.com/Sidd3100" className="text-white hover:text-white transform hover:scale-150 transition-all duration-150 ease-in-out">
                                         <i class="fa-brands fa-github fa-xl"></i>
                                     </a>
-                                    <a href="#" className="text-white hover:text-[#d62976] transform hover:scale-150 transition-all duration-150 ease-in-out">
+                                    <a href="https://www.instagram.com/siddhartha___rai/" className="text-white hover:text-[#d62976] transform hover:scale-150 transition-all duration-150 ease-in-out">
                                         <i class="fa-brands fa-instagram fa-xl"></i>
                                     </a>
                                     <a href="#" className="text-white hover:text-[#128c7e] transform hover:scale-150 transition-all duration-150 ease-in-out">
@@ -46,7 +48,7 @@ const Footer = () => {
                             <div className="footer-item">
                                 <div className="text-xl text-gray-200 uppercase mb-4 font-semibold">Contact us</div>
                                 <ul className="text-md text-gray-200">
-                                    <li className="my-2">Email: siddraimb@gmail.com</li>
+                                    <li className="my-2"><Link to = "/ContactUs" className="hover:text-red-700 transform hover:scale-110 transition-all duration-150 ease-in-out">Email: siddraimb@gmail.com</Link></li>
                                     <li className="my-2">Phone: +91 6387566061</li>
                                 </ul>
                                 

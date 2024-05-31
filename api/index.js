@@ -10,17 +10,23 @@ import User from './models/user.models.js';
 
 
 
-dotenv.config();
 
+dotenv.config();
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
 
-mongoose.connect("mongodb+srv://siddhartha:3gFHOl7isG8stdJs@mern-sketchsymphony.wflf0h1.mongodb.net/?retryWrites=true&w=majority&appName=mern-SketchSymphony").then(()=>{
-    console.log('connected');
+const uri = process.env.MONGODB_URI;
 
-}).catch((err)=> {console.log(err);});
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Connected to MongoDB');
+    })
+    .catch((err) => {
+        console.error('Error connecting to MongoDB', err);
+    });
+
 
 app.use('/api/user',userRouter)
 app.use('/api/auth',authRouter)
