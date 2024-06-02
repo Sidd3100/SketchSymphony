@@ -17,12 +17,19 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: path.resolve(__dirname, 'public'), // Output to 'public' directory
+    outDir: 'dist', // Default output directory for build files
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Optional: Configure manual chunks if needed for optimization
+        }
+      }
+    }
   },
+  publicDir: 'public', // Directory for static assets
 });
 
