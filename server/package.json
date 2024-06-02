@@ -1,8 +1,6 @@
 {
   "name": "sketchsymphony",
   "version": "1.0.0",
-  "description": "A project description goes here.",
-  "main": "api/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",
