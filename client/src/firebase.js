@@ -8,7 +8,7 @@ const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "mern-sketchsymphony.firebaseapp.com",
   projectId: "mern-sketchsymphony",
-  storageBucket: "mern-sketchsymphony",
+  storageBucket: "mern-sketchsymphony.appspot.com",
   messagingSenderId: "790548907501",
   appId: "1:790548907501:web:61ae238c15345ad81e93e4"
 };
